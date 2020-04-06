@@ -22,7 +22,7 @@ model = SentenceTransformer(modules=[word_embedding_model, pooling_model])
 
 model_save_path = 'output/training_fquad_'+model_name+'-'+datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
-fquad_reader = NLIDataReader('FQuad')
+fquad_reader = NLIDataReader('datasets/FQuad')
 batch_size = 4
 train_num_labels = fquad_reader.get_num_labels()
 
